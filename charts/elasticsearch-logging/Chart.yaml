@@ -1,0 +1,15 @@
+apiVersion: v1
+description: Elasticsearch logging
+home: https://github.com/elastic/helm-charts
+name: elasticsearch-logging-wiremind
+version: 1.2.1
+appVersion: 7.9.2
+sources:
+  - https://github.com/elastic/elasticsearch
+maintainers:
+- name: desaintmartin
+  email: cdesaintmartin@wiremind.io
+- name: machine424
+  email: amrini@wiremind.io
+- name: francoisminaud
+  email: fminaud@wiremind.io

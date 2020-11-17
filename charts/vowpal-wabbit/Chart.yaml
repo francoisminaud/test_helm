@@ -1,15 +1,9 @@
 apiVersion: v1
-name: nginx
-description: An NGINX HTTP server Tesgggi
-version: 2.1.0
-kubeVersion: ">=1.10.0"
-keywords:
-  - http
-  - nginx
-  - www
-  - web
-sources:
-  - https://hub.docker.com/_/nginx/
+name: vowpal-wabbit
+version: 0.0.1
+appVersion: "2018-05-16"
+description: Vowpal Wabbit
+icon: https://cdn.dribbble.com/users/261617/screenshots/3146111/vw-dribbble.png
 maintainers:
 - name: desaintmartin
   email: cdesaintmartin@wiremind.io
