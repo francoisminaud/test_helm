@@ -1,8 +1,6 @@
-# This is a basic workflow to help you get started with Actions
+name: Lint and Test Charts
 
-name: CI
-
-# Controls when the action will run. Triggers the workflow on push or pull request
+# Controls when the action will run. Triggers the workflow on pull request
 # events but only for the master branch
 on:
   pull_request:
@@ -32,13 +30,13 @@ jobs:
       - name: Run chart-testing (list-changed)
         id: list-changed
         run: |
-          changed=$(ct --config ct.yaml --chart-dirs charts list-changed)
+          changed=$(ct --config ct.yaml list-changed)
           if [[ -n "$changed" ]]; then
             echo "::set-output name=changed::true"
           fi
 
       - name: Run chart-testing (lint)
-        run: ct lint --chart-dirs charts --config ct.yaml
+        run: ct lint --config ct.yaml
 
       - name: Create kind cluster
         uses: helm/kind-action@v1.0.0
