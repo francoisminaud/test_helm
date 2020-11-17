@@ -29,7 +29,7 @@ ingress:
     name: some.host.com
 
 # nginxCustomConfig: |
-#   bla
+#   blc
 
 customLabels: {}
 
