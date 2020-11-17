@@ -34,7 +34,7 @@ jobs:
       - name: Run chart-testing (list-changed)
         id: list-changed
         run: |
-          changed=$(ct --config ct.yal list-changed)
+          changed=$(ct --config ct.yaml list-changed)
           if [[ -n "$changed" ]]; then
             echo "::set-output name=changed::true"
           fi
