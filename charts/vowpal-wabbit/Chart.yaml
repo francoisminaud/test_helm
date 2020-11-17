@@ -1,8 +1,8 @@
 apiVersion: v1
 name: vowpal-wabbit
-version: 0.0.1
+version: 0.0.2
 appVersion: "2018-05-16"
-description: Vowpal Wabbit
+description: Vowpal Wabbit_
 icon: https://cdn.dribbble.com/users/261617/screenshots/3146111/vw-dribbble.png
 maintainers:
 - name: desaintmartin

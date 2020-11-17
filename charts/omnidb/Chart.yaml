@@ -1,8 +1,8 @@
 apiVersion: "v1"
 appVersion: "2.9.0"
-description: "OmniDB: Web tool for database management."
+description: "OmniDB: Web tool for database management._"
 name: "omnidb"
-version: "0.1.0"
+version: "0.1.1"
 maintainers:
 - name: desaintmartin
   email: cdesaintmartin@wiremind.io
