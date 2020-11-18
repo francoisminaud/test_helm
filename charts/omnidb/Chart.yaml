@@ -1,4 +1,4 @@
-apiVersion: "v1"
+apiVersion: "v2"
 appVersion: "2.9.0"
 description: "OmniDB: Web tool for database management._"
 name: "omnidb"

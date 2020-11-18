@@ -14,8 +14,8 @@ replicaCount: 1
 
 image:
   repository: wiremind/vowpal-wabbit
-  tag: latest # Change me to a real image from a tag
-  pullPolicy: Always # Change to IfNotPresent
+  tag: latest  # Change me to a real image from a tag
+  pullPolicy: Always  # Change to IfNotPresent
   args: ''
 
 persistence:

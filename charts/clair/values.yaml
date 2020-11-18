@@ -37,9 +37,9 @@ resources:
     memory: 2000Mi
 config:
   # postgresURI: "postgres://user:password@host:5432/postgres?sslmode=disable"
-  #paginationKey: "XxoPtCUzrUv4JV5dS+yQ+MdW7yLEJnRMwigVY/bpgtQ="
+  # paginationKey: "XxoPtCUzrUv4JV5dS+yQ+MdW7yLEJnRMwigVY/bpgtQ="
   updateInterval: 2h
-  #notificationWebhookEndpoint: https://example.com/notify/me
+  # notificationWebhookEndpoint: https://example.com/notify/me
   enabledUpdaters:
   - debian
   - ubuntu
