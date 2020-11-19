@@ -30,19 +30,16 @@ es-data-hot:
     master: "false"
     ingest: "true"
     data: "true"
-  replicas: 2
+  replicas: 1
   esJavaOpts: "-Xmx128m -Xms128m"
   resources:
-    requests:
-      memory: "56Gi"
-      cpu: 4
     limits:
       memory: "56Gi"
       cpu: 15
   volumeClaimTemplate:
     resources:
       requests:
-        storage: 300Gi
+        storage: 3Gi
   ingress:
     enabled: true
     annotations:
@@ -82,7 +79,7 @@ es-data-warm:
     master: "false"
     ingest: "false"
     data: "true"
-  replicas: 2
+  replicas: 1
   esJavaOpts: "-Xmx128m -Xms128m"
   resources:
     limits:
@@ -156,8 +153,6 @@ kibana:
     limits:
       cpu: 2
       memory: 2Gi
-    requests:
-      cpu: 100m
   kibanaConfig:
     kibana.yml: |
       server.name: kibana
