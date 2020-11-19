@@ -31,7 +31,7 @@ es-data-hot:
     ingest: "true"
     data: "true"
   replicas: 2
-  esJavaOpts: "-Xmx16g -Xms16g"
+  esJavaOpts: "-Xmx128m -Xms128m"
   resources:
     requests:
       memory: "56Gi"
@@ -83,18 +83,15 @@ es-data-warm:
     ingest: "false"
     data: "true"
   replicas: 2
-  esJavaOpts: "-Xmx8g -Xms8g"
+  esJavaOpts: "-Xmx128m -Xms128m"
   resources:
-    requests:
-      memory: "18Gi"
-      cpu: 2
     limits:
       memory: "18Gi"
       cpu: 15
   volumeClaimTemplate:
     resources:
       requests:
-        storage: 500Gi
+        storage: 5Gi
 
 es-data-cold:
   <<: *defaults
@@ -118,18 +115,15 @@ es-data-cold:
     ingest: "false"
     data: "true"
   replicas: 1
-  esJavaOpts: "-Xmx8g -Xms8g"
+  esJavaOpts: "-Xmx128m -Xms128m"
   resources:
-    requests:
-      memory: 16Gi
-      cpu: 2
     limits:
       memory: 16Gi
       cpu: 6
   volumeClaimTemplate:
     resources:
       requests:
-        storage: 1800Gi
+        storage: 18Gi
 
 # The master nodes
 es-master:
@@ -150,11 +144,8 @@ es-master:
     master: "true"
     ingest: "false"
     data: "false"
-  esJavaOpts: "-Xms512m -Xmx512m"
+  esJavaOpts: "-Xms128m -Xmx128m"
   resources:
-    requests:
-      memory: "1Gi"
-      cpu: 20m
     limits:
       memory: "1Gi"
       cpu: "2"
@@ -167,7 +158,6 @@ kibana:
       memory: 2Gi
     requests:
       cpu: 100m
-      memory: 2Gi
   kibanaConfig:
     kibana.yml: |
       server.name: kibana
