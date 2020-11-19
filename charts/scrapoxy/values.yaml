@@ -60,15 +60,15 @@ config:
       max: 1
 
   providers:
-#    - type: awsec2
-#      accessKeyId: $SET_ME
-#      secretAccessKey: $SET_ME
-#      region: eu-west-3
-#      instance:
-#        InstanceType: t2.nano
-#        ImageId: set-me
-#        SecurityGroups:
-#          - forward-proxy
+    - type: awsec2
+      accessKeyId: $SET_ME
+      secretAccessKey: $SET_ME
+      region: eu-west-3
+      instance:
+        InstanceType: t2.nano
+        ImageId: set-me
+        SecurityGroups:
+          - forward-proxy
 
 #    - type: ovhcloud
 #      endpoint: ovh-eu
