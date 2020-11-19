@@ -45,7 +45,7 @@ resources:
 config:
   commander:
     port: 7778
-    # password: "setme"
+    password: "setme"
 
   proxy:
     auth:
