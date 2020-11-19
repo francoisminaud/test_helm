@@ -143,6 +143,8 @@ es-master:
     data: "false"
   esJavaOpts: "-Xms128m -Xmx128m"
   resources:
+    requests:
+      memory: "500Mi"
     limits:
       memory: "1Gi"
       cpu: "2"
