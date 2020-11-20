@@ -7,6 +7,5 @@ es-data-hot:
 # es-data-warm:
 #  antiAffinity: "soft"
 
-
 es-master:
   antiAffinity: "soft"
