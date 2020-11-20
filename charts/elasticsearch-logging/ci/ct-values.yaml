@@ -1,6 +1,7 @@
 es-data-hot:
   antiAffinity: "soft"
 
+
 #  es-data-cold:
 #   antiAffinity: "soft"
 
