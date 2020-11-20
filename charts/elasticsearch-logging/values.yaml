@@ -32,6 +32,7 @@ es-data-hot:
     data: "true"
   replicas: 1
   esJavaOpts: "-Xmx128m -Xms128m"
+  antiAffinity: "soft"
   resources:
     requests:
       cpu: "10m"
@@ -84,6 +85,7 @@ es-data-warm:
     data: "true"
   replicas: 1
   esJavaOpts: "-Xmx128m -Xms128m"
+  antiAffinity: "soft"
   resources:
     requests:
       memory: "128M"
@@ -119,6 +121,7 @@ es-data-cold:
     data: "true"
   replicas: 1
   esJavaOpts: "-Xmx128m -Xms128m"
+  antiAffinity: "soft"
   resources:
     requests:
       memory: "128M"
@@ -151,6 +154,7 @@ es-master:
     ingest: "false"
     data: "false"
   esJavaOpts: "-Xms128m -Xmx128m"
+  antiAffinity: "soft"
   resources:
     requests:
       memory: "128M"
