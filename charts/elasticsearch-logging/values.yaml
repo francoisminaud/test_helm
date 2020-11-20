@@ -31,7 +31,7 @@ es-data-hot:
     ingest: "true"
     data: "true"
   replicas: 1
-  esJavaOpts: "-Xmx128m -Xms128m"
+  esJavaOpts: "-Xmx128m  -Xms128m"
   antiAffinity: "soft"
   resources:
     requests:
