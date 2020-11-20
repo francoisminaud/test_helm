@@ -53,3 +53,5 @@ jobs:
       - name: Run chart-testing (install)
         run: ct install --config ct.yaml --helm-extra-args "--timeout 600s"
 
+      - name: Run meminfo (free -m)
+        run: free -m
