@@ -7,5 +7,6 @@ es-data-cold:
 es-data-warm:
   antiAffinity: "soft"
 
+
 es-master:
   antiAffinity: "soft"
