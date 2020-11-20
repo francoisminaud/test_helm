@@ -33,13 +33,15 @@ es-data-hot:
   replicas: 1
   esJavaOpts: "-Xmx128m -Xms128m"
   resources:
+    requests:
+      cpu: "10m"
     limits:
       memory: "56Gi"
       cpu: 15
   volumeClaimTemplate:
     resources:
       requests:
-        storage: 3Gi
+        storage: 100M
   ingress:
     enabled: true
     annotations:
@@ -82,13 +84,15 @@ es-data-warm:
   replicas: 1
   esJavaOpts: "-Xmx128m -Xms128m"
   resources:
+    requests:
+      cpu: "10m"
     limits:
       memory: "18Gi"
       cpu: 15
   volumeClaimTemplate:
     resources:
       requests:
-        storage: 5Gi
+        storage: 100M
 
 es-data-cold:
   <<: *defaults
@@ -114,13 +118,15 @@ es-data-cold:
   replicas: 1
   esJavaOpts: "-Xmx128m -Xms128m"
   resources:
+    requests:
+      cpu: "10m"
     limits:
       memory: 16Gi
       cpu: 6
   volumeClaimTemplate:
     resources:
       requests:
-        storage: 18Gi
+        storage: 100M
 
 # The master nodes
 es-master:
@@ -144,7 +150,8 @@ es-master:
   esJavaOpts: "-Xms128m -Xmx128m"
   resources:
     requests:
-      memory: "500Mi"
+      cpu: "10m"
+      #memory: "500Mi"
     limits:
       memory: "1Gi"
       cpu: "2"
