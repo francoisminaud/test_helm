@@ -62,7 +62,7 @@ es-data-hot:
         hosts:
           - elasticsearch.setme.org
 
-#es-data-warm:
+# es-data-warm:
 #  <<: *defaults
 #  nodeGroup: "data-warm"
 #  esConfig:
@@ -98,7 +98,7 @@ es-data-hot:
 #      requests:
 #        storage: 100M
 #
-#es-data-cold:
+# es-data-cold:
 #  <<: *defaults
 #  nodeGroup: "data-cold"
 #  esConfig:
