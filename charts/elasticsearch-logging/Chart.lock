@@ -2,12 +2,12 @@ dependencies:
 - name: elasticsearch
   repository: https://helm.elastic.co
   version: 7.9.3
-- name: elasticsearch
-  repository: https://helm.elastic.co
-  version: 7.9.3
-- name: elasticsearch
-  repository: https://helm.elastic.co
-  version: 7.9.3
+# - name: elasticsearch
+#   repository: https://helm.elastic.co
+#   version: 7.9.3
+# - name: elasticsearch
+#  repository: https://helm.elastic.co
+#   version: 7.9.3
 - name: elasticsearch
   repository: https://helm.elastic.co
   version: 7.9.3
