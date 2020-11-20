@@ -167,6 +167,8 @@ es-master:
 kibana:
   elasticsearchHosts: http://logging-data-hot:9200
   resources:
+    requests:
+      memory: "256M"
     limits:
       cpu: 2
       memory: 2Gi
