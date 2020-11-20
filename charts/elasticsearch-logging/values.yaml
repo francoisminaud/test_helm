@@ -35,6 +35,7 @@ es-data-hot:
   resources:
     requests:
       cpu: "10m"
+      memory: "128M"
     limits:
       memory: "56Gi"
       cpu: 15
@@ -85,6 +86,7 @@ es-data-warm:
   esJavaOpts: "-Xmx128m -Xms128m"
   resources:
     requests:
+      memory: "128M"
       cpu: "10m"
     limits:
       memory: "18Gi"
@@ -119,6 +121,7 @@ es-data-cold:
   esJavaOpts: "-Xmx128m -Xms128m"
   resources:
     requests:
+      memory: "128M"
       cpu: "10m"
     limits:
       memory: 16Gi
@@ -150,6 +153,7 @@ es-master:
   esJavaOpts: "-Xms128m -Xmx128m"
   resources:
     requests:
+      memory: "128M"
       cpu: "10m"
       # memory: "500Mi"
     limits:
