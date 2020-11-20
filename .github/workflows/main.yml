@@ -40,7 +40,7 @@ jobs:
 
       - name: Validate schema
         #uses: desaintmartin/helm-kubeval-action@v1.0.2
-        uses: francoisminaud/helm-kubeval-action@master
+        uses: wiremind/helm-kubeval-action@v1.1.0
         with:
           path: charts
           config: config_repos
