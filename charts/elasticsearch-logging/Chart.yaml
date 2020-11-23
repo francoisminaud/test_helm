@@ -1,13 +1,13 @@
 apiVersion: v2
 description: Elasticsearch logging
 home: https://github.com/elastic/helm-charts
-name: elasticsearch-logging-wiremind_
+name: elasticsearch-logging-wiremind
 version: 1.2.2
 appVersion: 7.9.2
 dependencies:
   - name: elasticsearch
     repository: "https://helm.elastic.co"
-    version: "*"
+    version: "7.10.0"
     alias: es-data-hot
 #  - name: elasticsearch
 #    repository: "https://helm.elastic.co"
@@ -19,11 +19,11 @@ dependencies:
 #    alias: es-data-cold
   - name: elasticsearch
     repository: "https://helm.elastic.co"
-    version: "*"
+    version: "7.10.0"
     alias: es-master
   - name: kibana
     repository: "https://helm.elastic.co"
-    version: "*"
+    version: "7.10.0"
   - name: prometheus-elasticsearch-exporter
     repository: "https://prometheus-community.github.io/helm-charts"
     version: "4.0.0"
