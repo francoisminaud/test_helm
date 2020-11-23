@@ -36,5 +36,5 @@ Create Secret used for Basic Auth (basic-auth-upload-htpasswd).
 Do not forget to set the values to override the default values
 */}}
 {{- define "pypi.basic-auth-upload-htpasswd" -}}
-{{- htpasswd "%s" "%s" .Values.htpasswd_username .Values.htpasswd_password -}}
+{{- htpasswd .Values.htpasswd_username .Values.htpasswd_password | b64enc -}}
 {{- end -}}
