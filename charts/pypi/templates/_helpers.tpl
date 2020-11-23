@@ -30,3 +30,10 @@ Create chart name and version as used by the chart label.
 {{- define "pypi.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
+
+{{/*
+Create chart name and version as used by the chart label.
+*/}}
+{{- define "basic-auth-upload-htpasswd" -}}
+{{- htpasswd "%s" "%s" .Values.htpasswd_username .Values.htpasswd_password -}}
+{{- end -}}

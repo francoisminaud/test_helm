@@ -98,3 +98,9 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+## basic-auth-upload-htpasswd username and password used by default if not changed
+## Can be changed by using the following parameters in helm install command
+## --set  htpasswd_username="setusername" --set htpasswd_password="setpassword"
+htpasswd_username: "pass-username-as-parameter"
+htpasswd_password: "pass-password-as-parameter"

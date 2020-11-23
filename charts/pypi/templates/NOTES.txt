@@ -1,5 +1,3 @@
-{{ htpasswd "pypi" "WiremindPypi123" }}
-
 Do not forget to setup your secret for basic auth (downloading):
   htpasswd -c my-htpasswd-file my-user
   kubectl create secret generic basic-auth-htpasswd --from-file=my-htpasswd-file --namespace {{ .Release.Namespace }}
