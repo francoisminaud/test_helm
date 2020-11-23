@@ -32,8 +32,9 @@ Create chart name and version as used by the chart label.
 {{- end -}}
 
 {{/*
-Create chart name and version as used by the chart label.
+Create Secret used for Basic Auth (basic-auth-upload-htpasswd). 
+Do not forget to set the values to override the default values
 */}}
-{{- define "basic-auth-upload-htpasswd" -}}
+{{- define "pypi.basic-auth-upload-htpasswd" -}}
 {{- htpasswd "%s" "%s" .Values.htpasswd_username .Values.htpasswd_password -}}
 {{- end -}}
