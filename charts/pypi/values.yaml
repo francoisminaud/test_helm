@@ -50,9 +50,9 @@ ingressUpload:
   #     hosts:
   #       - upload.myhost.com
 
-basicAuth:
-  # Authenticate for uploading, use existing secret
-  secretName: "basic-auth-upload-htpasswd"
+# basicAuth:
+# Authenticate for uploading, use existing secret
+#  secretName: "basic-auth-upload-htpasswd"
 
 livenessProbe:
   initialDelaySeconds: 30
@@ -98,3 +98,9 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+## basic-auth-upload-htpasswd username and password used by default if not changed
+## Can be changed by using the following parameters in helm install command
+## --set  htpasswd_username="setusername" --set htpasswd_password="setpassword"
+htpasswd_username: ""
+htpasswd_password: ""

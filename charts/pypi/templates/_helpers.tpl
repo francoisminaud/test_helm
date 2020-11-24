@@ -30,3 +30,11 @@ Create chart name and version as used by the chart label.
 {{- define "pypi.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
+
+{{/*
+Create Secret used for Basic Auth (basic-auth-upload-htpasswd). 
+Do not forget to set the values to override the default values
+*/}}
+{{- define "pypi.basic-auth-upload-htpasswd" -}}
+{{- htpasswd .Values.htpasswd_username .Values.htpasswd_password | b64enc -}}
+{{- end -}}
