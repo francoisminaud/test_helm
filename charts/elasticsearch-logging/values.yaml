@@ -154,7 +154,6 @@ es-master:
     ingest: "false"
     data: "false"
   esJavaOpts: "-Xms128m -Xmx128m"
-  # antiAffinity: "soft"
   resources:
     requests:
       memory: "128M"
