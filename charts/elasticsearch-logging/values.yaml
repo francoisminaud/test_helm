@@ -63,76 +63,76 @@ es-data-hot:
           - elasticsearch.setme.org
 
 es-data-warm:
- <<: *defaults
- nodeGroup: "data-warm"
- enabled: false
- esConfig:
-   elasticsearch.yml: |
-     node:
-       attr:
-         data: warm
-     xpack:
-       security:
-         enabled: false
-         transport:
-           ssl:
-             enabled: false
-         http:
-           ssl:
-             enabled: false
- roles:
-   master: "false"
-   ingest: "false"
-   data: "true"
- replicas: 1
- esJavaOpts: "-Xmx128m -Xms128m"
- resources:
-   requests:
-     memory: "128M"
-     cpu: "10m"
-   limits:
-     memory: "18Gi"
-     cpu: 15
- volumeClaimTemplate:
-   resources:
-     requests:
-       storage: 100M
+  <<: *defaults
+  nodeGroup: "data-warm"
+  enabled: false
+  esConfig:
+    elasticsearch.yml: |
+      node:
+        attr:
+          data: warm
+      xpack:
+        security:
+          enabled: false
+          transport:
+            ssl:
+              enabled: false
+          http:
+            ssl:
+              enabled: false
+  roles:
+    master: "false"
+    ingest: "false"
+    data: "true"
+  replicas: 1
+  esJavaOpts: "-Xmx128m -Xms128m"
+  resources:
+    requests:
+      memory: "128M"
+      cpu: "10m"
+    limits:
+      memory: "18Gi"
+      cpu: 15
+  volumeClaimTemplate:
+    resources:
+      requests:
+        storage: 100M
 
 es-data-cold:
- <<: *defaults
- nodeGroup: "data-cold"
- enable: false
- esConfig:
-   elasticsearch.yml: |
-     node:
-       attr:
-         data: cold
-     xpack:
-       security:
-         enabled: false
-         transport:
-           ssl:
-             enabled: false
-         http:
-           ssl:
-             enabled: false
- roles:
-   master: "false"
-   ingest: "false"
-   data: "true"
- replicas: 1
- esJavaOpts: "-Xmx128m -Xms128m"
- resources:
-   requests:
-     memory: "128M"
-     cpu: "10m"
-   limits:
-     memory: 16Gi
-     cpu: 6
- volumeClaimTemplate:
-   resources:
-     requests:
-       storage: 100M
+  <<: *defaults
+  nodeGroup: "data-cold"
+  enable: false
+  esConfig:
+    elasticsearch.yml: |
+      node:
+        attr:
+          data: cold
+      xpack:
+        security:
+          enabled: false
+          transport:
+            ssl:
+              enabled: false
+          http:
+            ssl:
+              enabled: false
+  roles:
+    master: "false"
+    ingest: "false"
+    data: "true"
+  replicas: 1
+  esJavaOpts: "-Xmx128m -Xms128m"
+  resources:
+    requests:
+      memory: "128M"
+      cpu: "10m"
+    limits:
+      memory: 16Gi
+      cpu: 6
+  volumeClaimTemplate:
+    resources:
+      requests:
+        storage: 100M
 
 # The master nodes
 es-master:
