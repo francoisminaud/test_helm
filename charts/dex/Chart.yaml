@@ -4,12 +4,12 @@ version: 2.15.3
 appVersion: 2.24.0
 description: OpenID Connect Identity (OIDC) and OAuth 2.0 Provider with Pluggable Connectors
 keywords:
-- dex
-- oidc
+  - dex
+  - oidc
 icon: https://github.com/dexidp/dex/raw/master/Documentation/logos/dex-glyph-color.png
 home: https://github.com/dexidp/dex/
 source:
-- https://github.com/dexidp/dex/
+  - https://github.com/dexidp/dex/
 maintainers:
   - name: desaintmartin
     email: cdesaintmartin@wiremind.io
